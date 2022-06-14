@@ -89,6 +89,7 @@ for i in range(2, len(data.columns)):
         y_pred = model.predict(X_test)
 
         # Transforming back to the original unscaled values
+        y_test = scaler.inverse_transform(y_test)
         y_pred = scaler.inverse_transform(y_pred)
 
         # Computing the RMSE performance of the model with event window size 1
@@ -208,6 +209,7 @@ for i in range(2, len(data.columns)):
         y_pred = model.predict(X_test)
 
         # Transforming back to the original unscaled values
+        y_test = scaler.inverse_transform(y_test)
         y_pred = scaler.inverse_transform(y_pred)
 
         # Computing the RMSE performance of the model with event window size 1
@@ -327,6 +329,7 @@ for i in range(2, len(data.columns)):
         y_pred = model.predict(X_test)
 
         # Transforming back to the original unscaled values
+        y_test = scaler.inverse_transform(y_test)
         y_pred = scaler.inverse_transform(y_pred)
 
         # Computing the RMSE performance of the model with event window size 1
